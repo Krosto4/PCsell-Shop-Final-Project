@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import { logInUser } from "../dataApi/dataApi";
-import "../page styles/LogIn.css";  // Добавьте путь к вашему CSS файлу
+import "../page styles/LogInSignIn.css";  // Добавьте путь к вашему CSS файлу
 
 export default function LogIn() {
   const [validated, setValidated] = useState(false);

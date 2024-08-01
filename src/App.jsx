@@ -6,8 +6,10 @@ import ErrorPage from "./pages/ErrorPage";
 import LogIn from "./pages/LogIn";
 import Registration from "./pages/Registration";
 import Profile from "./pages/Profile";
+import { initData } from "./dataApi/dataApi";
 
 function App() {
+  initData();
   return (
     <>
       <Routes>

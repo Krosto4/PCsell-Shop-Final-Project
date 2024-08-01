@@ -1,0 +1,62 @@
+.alertDiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alertSuccess {
+    position: absolute;
+    top: -160px;
+    animation-name: alertGoingInSuccess;
+    animation-duration: 3s;
+}
+
+.alertFail {
+    position: absolute;
+    top: -160px;
+    animation-name: alertGoingInFail;
+    animation-duration: 5s;
+}
+
+@keyframes alertGoingInFail {
+    0% {
+        transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(130px);
+    }
+    15%{
+        transform: translateY(120px);
+    }
+    80% {
+        transform: translateY(120px);
+    }
+    85%{
+        transform: translateY(130px);
+    }
+    100% {
+        transform: translateY(-160px);
+    }
+}
+
+@keyframes alertGoingInSuccess {
+    0% {
+        transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(130px);
+    }
+    15%{
+        transform: translateY(120px);
+    }
+    80% {
+        transform: translateY(120px);
+    }
+    85%{
+        transform: translateY(130px);
+    }
+    100% {
+        transform: translateY(-160px);
+    }
+}

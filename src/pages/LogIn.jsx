@@ -6,7 +6,8 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import { logInUser } from "../dataApi/dataApi";
-import "../page styles/LogInSignIn.css";  // Добавьте путь к вашему CSS файлу
+import "../page styles/LogInSignIn.css";
+import logo from "../assets/PCsell Shop Logo PNG.png";
 
 export default function LogIn() {
   const [validated, setValidated] = useState(false);
@@ -42,19 +43,19 @@ export default function LogIn() {
     setValidated(true);
   };
 
-  function showRusultOfLogIn(){
-    if(successLogIn === "Success"){
-        return(
-            <Alert className="alertSuccess" variant={"success"}>
-                Login successful! Redirecting...
-            </Alert>
-        )
-    } else if(successLogIn === "Error") {
-        return(
-            <Alert className="alertFail" variant={"danger"}>
-                Login failed. Please try again.
-            </Alert>
-        )
+  function showRusultOfLogIn() {
+    if (successLogIn === "Success") {
+      return (
+        <Alert className="alertSuccess" variant={"success"}>
+          Login successful! Redirecting...
+        </Alert>
+      );
+    } else if (successLogIn === "Error") {
+      return (
+        <Alert className="alertFail" variant={"danger"}>
+          Login failed. Please try again.
+        </Alert>
+      );
     }
   }
 
@@ -64,7 +65,15 @@ export default function LogIn() {
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
             <Navbar.Brand>
-              <Link to={"/"}>PCsell Shop</Link>
+              <Link
+                to={"/"}
+                className="d-flex gap-3 justify-content-center align-items-center"
+              >
+                <div>
+                  <img style={{ maxWidth: "90px" }} src={logo} />
+                </div>
+                <div>PCsell Shop</div>
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -83,10 +92,13 @@ export default function LogIn() {
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-3">
               <h1 className="text-center">Log In</h1>
-              <div className="alertDiv">
-                {showRusultOfLogIn()}
-              </div>
-              <Form.Group className="my-2" as={Col} md="12" controlId="validationCustom01">
+              <div className="alertDiv">{showRusultOfLogIn()}</div>
+              <Form.Group
+                className="my-2"
+                as={Col}
+                md="12"
+                controlId="validationCustom01"
+              >
                 <Form.Label>Username</Form.Label>
                 <Form.Control
                   required
@@ -102,7 +114,12 @@ export default function LogIn() {
                 />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               </Form.Group>
-              <Form.Group className="my-2" as={Col} md="12" controlId="validationCustom02">
+              <Form.Group
+                className="my-2"
+                as={Col}
+                md="12"
+                controlId="validationCustom02"
+              >
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   required
@@ -129,8 +146,10 @@ export default function LogIn() {
             </Form.Group>
             <Button type="submit">Log In</Button>
             <div className="my-4">
-                  Don't have an account? Create it!
-                  <Link className="btn btn-primary mx-3" to={"/registration"}>Registration</Link>
+              Don't have an account? Create it!
+              <Link className="btn btn-primary mx-3" to={"/registration"}>
+                Sign In
+              </Link>
             </div>
           </Form>
         </div>

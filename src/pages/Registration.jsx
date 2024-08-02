@@ -10,8 +10,9 @@ import {
 } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { registrateUser } from "../dataApi/dataApi"; // Убедитесь, что путь правильный
-import "../page styles/LogInSignIn.css"; // Добавьте путь к вашему CSS файлу
+import { registrateUser } from "../dataApi/dataApi";
+import "../page styles/LogInSignIn.css";
+import logo from "../assets/PCsell Shop Logo PNG.png";
 
 export default function Registration() {
   const [validated, setValidated] = useState(false);
@@ -42,7 +43,7 @@ export default function Registration() {
   function registration(formData) {
     const newUser = formData;
     registrateUser(newUser);
-    setSuccessReg("Success")
+    setSuccessReg("Success");
     setTimeout(() => {
       navigate("/log-in");
     }, 4000);
@@ -70,7 +71,15 @@ export default function Registration() {
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
             <Navbar.Brand>
-              <Link to={"/"}>PCsell Shop</Link>
+              <Link
+                to={"/"}
+                className="d-flex gap-3 justify-content-center align-items-center"
+              >
+                <div>
+                  <img style={{ maxWidth: "90px" }} src={logo} />
+                </div>
+                <div>PCsell Shop</div>
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

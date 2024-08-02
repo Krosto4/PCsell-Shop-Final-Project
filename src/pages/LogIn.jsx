@@ -70,7 +70,7 @@ export default function LogIn() {
                 className="d-flex gap-2 justify-content-center align-items-center"
               >
                 <div>
-                  <img style={{ maxWidth: "90px" }} src={logo} />
+                  <img className="logo" style={{ maxWidth: "90px" }} src={logo} />
                 </div>
                 <div>PCsell Shop</div>
               </Link>

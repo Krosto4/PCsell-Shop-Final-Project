@@ -97,7 +97,7 @@ export default function Profile() {
                 className="d-flex gap-2 justify-content-center align-items-center"
               >
                 <div>
-                  <img style={{ maxWidth: "90px" }} src={logo} />
+                  <img className="logo" style={{ maxWidth: "90px" }} src={logo} />
                 </div>
                 <div>PCsell Shop</div>
               </Link>
@@ -143,7 +143,7 @@ export default function Profile() {
                       />
                     </td>
                     <td>
-                      <span className="text-success">{product.price - 1}$</span>
+                      <span className="text-success">{product.price}$</span>
                     </td>
                     <td>
                       <Button

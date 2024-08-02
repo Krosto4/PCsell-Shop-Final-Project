@@ -61,7 +61,7 @@ export default function Shop() {
             <Navbar.Brand>
               <Link
                 to={"/"}
-                className="d-flex gap-3 justify-content-center align-items-center"
+                className="d-flex gap-2 justify-content-center align-items-center"
               >
                 <div>
                   <img style={{ maxWidth: "90px" }} src={logo} />
@@ -165,7 +165,7 @@ export default function Shop() {
                 <div>Name: {productInfoInModal.name}</div>
                 <div>Description: {productInfoInModal.description}</div>
                 <div>New: {productInfoInModal.new}</div>
-                <div>Price: <span className="text-success">{productInfoInModal.price}$</span></div>
+                <div>Price: <span className="text-success">{productInfoInModal.price -1}$</span></div>
               </div>
               <div className="col">
                 <div>RAM: {productInfoInModal.ram}GB</div>

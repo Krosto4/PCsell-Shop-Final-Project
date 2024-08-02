@@ -73,7 +73,7 @@ export default function Registration() {
             <Navbar.Brand>
               <Link
                 to={"/"}
-                className="d-flex gap-3 justify-content-center align-items-center"
+                className="d-flex gap-2 justify-content-center align-items-center"
               >
                 <div>
                   <img style={{ maxWidth: "90px" }} src={logo} />
